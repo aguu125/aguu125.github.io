@@ -75,7 +75,7 @@ jobs:
 默认github 发布给我们的地址是 `https://github帐号.github.io`,但是也支持使用我们自己的域名，而且支持https，会自动帮我们配置Let's Encrypt的免费证书，这点非常好。你要做的就是去购买域名，域名解析CNAME到 你的github.io地址就可以了。
 
 1. 域名购买，域名解析（略...）
-2. 打开github仓库的 `Settings`,在侧边栏 Pages 有个`Custom domain` 填入你的域名。如果你不希望提供http服务，只想提供https，记得`Enforce HTTPS` 选型。否则 http和https服务都可以访问到你的blog。
+2. 打开github仓库的 `Settings`,在侧边栏 Pages 有个`Custom domain` 填入你的域名。如果你不希望提供http服务，只想提供https，记得`Enforce HTTPS` 选型。这样 http 会302 重定向到 https服务。
 3. 等域名解析生效后访问。https 服务的证书更新则需要一段时间，现在打开会报证书无效(使用的github的证书)。
 
 ## 参考
