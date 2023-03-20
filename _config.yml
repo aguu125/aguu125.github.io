@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: huimig's blog
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
-language: en
-timezone: ''
+author: huiming
+language: zh-CN
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://blog.huiming.wang
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -101,7 +101,7 @@ theme: pure
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repo: https://github.com/aguu125/aguu125.github.io.git
-  branch: master
+# deploy:
+  # type: git
+  # repo: https://github.com/aguu125/aguu125.github.io.git
+  # branch: master
