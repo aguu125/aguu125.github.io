@@ -78,6 +78,8 @@ jobs:
 2. 打开github仓库的 `Settings`,在侧边栏 Pages 有个`Custom domain` 填入你的域名。如果你不希望提供http服务，只想提供https，记得`Enforce HTTPS` 选型。这样 http 会302 重定向到 https服务。
 3. 等域名解析生效后访问。https 服务的证书更新则需要一段时间，现在打开会报证书无效(使用的github的证书)。
 
+4. 关于hexo发布后，Custom domain 都需要重写配置问题。就是在 源码`source`下添加`CNAME` 文件，内容就是自定义域名
+   
 ## 参考
 
 - [hexo-theme-pure主题](https://github.com/cofess/hexo-theme-pure)
