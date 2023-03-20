@@ -26,7 +26,7 @@
 <meta property="og:description" content="这里记录下自己使用hexo，github 搭建自己的blog的一个过程，方便有需要的朋友可以参考.非小白教程，这里默认首先你有github帐号,并且能够使用git进行github仓库的基本操作。主要操作流程就是：  搭建一个基于hexo的blog项目，并提交特定的github仓库的主干分支  定义github的Actions，提交代码会触发执行hexo 构建生成HTML到public目录，并执行发">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-16T01:33:20.000Z">
-<meta property="article:modified_time" content="2023-03-20T09:00:07.603Z">
+<meta property="article:modified_time" content="2023-03-20T14:18:47.861Z">
 <meta property="article:author" content="huiming">
 <meta property="article:tag" content="blog">
 <meta property="article:tag" content="hexo">
@@ -282,9 +282,14 @@
 
 <h2 id="使用自定义域名"><a href="#使用自定义域名" class="headerlink" title="使用自定义域名"></a>使用自定义域名</h2><p>默认github 发布给我们的地址是 <code>https://github帐号.github.io</code>,但是也支持使用我们自己的域名，而且支持https，会自动帮我们配置Let’s Encrypt的免费证书，这点非常好。你要做的就是去购买域名，域名解析CNAME到 你的github.io地址就可以了。</p>
 <ol>
-<li>域名购买，域名解析（略…）</li>
-<li>打开github仓库的 <code>Settings</code>,在侧边栏 Pages 有个<code>Custom domain</code> 填入你的域名。如果你不希望提供http服务，只想提供https，记得<code>Enforce HTTPS</code> 选型。这样 http 会302 重定向到 https服务。</li>
-<li>等域名解析生效后访问。https 服务的证书更新则需要一段时间，现在打开会报证书无效(使用的github的证书)。</li>
+<li><p>域名购买，域名解析（略…）</p>
+</li>
+<li><p>打开github仓库的 <code>Settings</code>,在侧边栏 Pages 有个<code>Custom domain</code> 填入你的域名。如果你不希望提供http服务，只想提供https，记得<code>Enforce HTTPS</code> 选型。这样 http 会302 重定向到 https服务。</p>
+</li>
+<li><p>等域名解析生效后访问。https 服务的证书更新则需要一段时间，现在打开会报证书无效(使用的github的证书)。</p>
+</li>
+<li><p>关于hexo发布后，Custom domain 都需要重写配置问题。就是在 源码<code>source</code>下添加<code>CNAME</code> 文件，内容就是自定义域名</p>
+</li>
 </ol>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/cofess/hexo-theme-pure">hexo-theme-pure主题</a></li>
